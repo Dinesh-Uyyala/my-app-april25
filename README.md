@@ -73,3 +73,14 @@ Steps to install Angular Application:
 
 
 
+
+
+Directives:  Used to alter the DOM
+===========
+
+1. Structure Directives:
+    *ngFor, *ngIf
+
+2. Attribute Directives:
+    ngClass, ngStyle
+
