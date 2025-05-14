@@ -10,7 +10,9 @@ import { ErrorComponent } from './error/error.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { FormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
-
+import { EmployeeComponent } from './employee/employee.component';
+import { VehiclesComponent } from './vehicles/vehicles.component';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -21,11 +23,14 @@ import { DirectivesComponent } from './directives/directives.component';
     ErrorComponent,
     DataBindingComponent,
     DirectivesComponent,
+    EmployeeComponent,
+    VehiclesComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

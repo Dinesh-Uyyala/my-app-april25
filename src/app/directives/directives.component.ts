@@ -21,4 +21,5 @@ products:any[]=[
   {name:'bike',price:200000,rating:1},
 ]
 
+today:any = new Date();
 }

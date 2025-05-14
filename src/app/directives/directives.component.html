@@ -1,7 +1,7 @@
 <h1>Directives</h1>
 
 <!-- <h4>{{age}}</h4> -->
-<h5 *ngFor="let age of ages">{{age}}</h5>
+<!-- <h5 *ngFor="let age of ages">{{age}}</h5>
 
 <ol>
     <li *ngFor="let age of ages">{{age}}</li>
@@ -22,13 +22,22 @@
     </thead>
     <tbody>
         <tr *ngFor="let product of products">
-            <td>{{product.name}}</td>
-            <td [ngStyle]="{'color':product.price<=2000?'green':'red'}">{{product.price}}</td>
+            <td>{{product.name | lowercase}}</td>
+            <td [ngStyle]="{'color':product.price<=2000?'green':'red'}">{{product.price | currency}}</td>
             <td [ngClass]="{'green':product.rating>3.5,'yellow':((product.rating>2.5)&&(product.rating<=3.5)),
                         'red':(product.rating<=2.5)}">{{product.rating}}</td>
         </tr>
     </tbody>
-</table>
+</table> -->
 
 <h2 *ngIf="false">Hello Everyone</h2>
-<h2 *ngIf="true">Welcome to Mohith IT</h2>
+<h2 *ngIf="false">Welcome to Mohith IT</h2>
+
+
+
+<h4>{{today}}</h4>
+<h4>{{today | date}}</h4>
+<h4>{{today | date:'dd-MM-yyyy'}}</h4>
+<h4>{{today | date:'yyyy-MM-dd'}}</h4>
+<h4>{{today | date:'hh-mm'}}</h4>
+<h4>{{today | date:'hh:mm:ss'}}</h4>
