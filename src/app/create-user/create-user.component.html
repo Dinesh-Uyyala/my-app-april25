@@ -1,0 +1,73 @@
+<h1>Create User</h1>
+
+<form [formGroup]="userForm">
+    <label>Name:</label>
+    <input type="text" formControlName="name"><br>
+
+    <div *ngIf="userForm.get('name')?.touched && userForm.get('name')?.invalid">
+        <p *ngIf="userForm.get('name')?.errors?.['required']">Name should Required</p>
+        <p *ngIf="userForm.get('name')?.errors?.['minlength']">Name should be minimum 6 letters</p>
+        <p *ngIf="userForm.get('name')?.errors?.['maxlength']">Name should maximum 12 letters</p>
+    </div>
+
+
+    <label>Mobile:</label>
+    <input type="number" formControlName="mobile"><br>
+    <label>Email:</label>
+    <input type="email" formControlName="email"><br>
+    <!-- <label>Password:</label>
+    <input type="password" formControlName="password"><br> -->
+
+    <div formGroupName="address">
+    <label>City:</label>
+    <input type="text" formControlName="city"><br>
+    <label>State:</label>
+    <input type="text" formControlName="state"><br>
+    <label>Pincode:</label>
+    <input type="number" formControlName="pin"><br>
+    </div>
+
+    <label>Type:</label>
+    <input type="radio" name="type" formControlName="type" value="dayScholar">
+    <label>Day Scholar</label>
+    <input type="radio" name="type" formControlName="type" value="residential">
+    <label>Residential</label><br>
+
+
+    <div *ngIf="userForm.get('type')?.value=='dayScholar'">
+        <label for="">Bus Fee:</label>
+        <input type="number" formControlName="busFee"><br>
+    </div>
+
+    <div  *ngIf="userForm.get('type')?.value=='residential'">
+        <label for="">Hostel Fee:</label>
+        <input type="number" formControlName="hostelFee"><br>
+    </div>
+
+    <label for="">cards:</label>
+    <button class="btn btn-success" (click)="addCard()">Add Card</button><br>
+
+
+<div formArrayName="cards">
+    <div *ngFor="let card of CardsFormArray.controls;let i=index">
+        <div formGroupName="{{i}}">
+            <h1>card{{i+1}}</h1>
+            <label for="">Number:</label>
+            <input type="number" formControlName="number"><br> 
+            <label for="">Name:</label>
+            <input type="text" formControlName="name"><br>
+            <label for="">expiry:</label>
+            <input type="month" formControlName="expiry"><br>
+            <label for="">cvv:</label>
+            <input type="number" formControlName="cvv"><br>
+
+            <button class="btn btn-danger" (click)="deleteCard(i)">Delete</button>
+        </div>
+    </div>
+
+
+</div>
+
+    <br>
+    <button (click)="submit()" class="btn btn-primary">submit</button>
+</form>

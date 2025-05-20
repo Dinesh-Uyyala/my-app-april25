@@ -8,15 +8,23 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { CreateUserComponent } from './create-user/create-user.component';
+import { AuthenticationGuard } from './authentication.guard';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
-  {path:'dashboard',component:DashboardComponent,children:[
-    {path:'',component:HomeComponent},
+  {path:'dashboard',component:DashboardComponent, canActivate:[AuthenticationGuard],children:[
+    {path:'',component:HomeComponent,canActivate:[AuthenticationGuard],},
     {path:'data-binding',component:DataBindingComponent},
     {path:'directives',component:DirectivesComponent},
     {path:'employee',component:EmployeeComponent},
     {path:'vehicles',component:VehiclesComponent},
+    {path:'create-vehicle',component:CreateVehicleComponent},
+    {path:'create-user',component:CreateUserComponent},
+    {path:'vehicle-details/:id',component:VehicleDetailsComponent},
+    {path:'edit-vehicle/:id',component:CreateVehicleComponent},
   ]}, 
   {path:'**',component:ErrorComponent}
 ];

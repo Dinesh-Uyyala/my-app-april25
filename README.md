@@ -84,3 +84,45 @@ Directives:  Used to alter the DOM
 2. Attribute Directives:
     ngClass, ngStyle
 
+
+
+
+
+
+Possible API Calls:
+===================
+1) all details              get         get(url)
+2) specific details         get         get(url/id)
+3) filtering                get         get(url?filter=term)
+4) sorting                  get         get(url?sortBy=column&order=asc/desc)
+5) pagination               get         get(url?limit=values&page=pageno)
+
+6) create                   post        post(url,data)
+7) update                   
+8) delete                   delete      delete(url/id)
+
+
+
+Validations:
+============
+
+ts:
+===
+
+name:new FormControl('',[Validators.required,Validators.minLength(6),Validators.maxLength(12)])
+
+html:
+=====
+
+<div *ngIf="CONTROLS?.touched && CONTROLS?.invalid">
+        <p *ngIf="CONTROLS?.errors?.['required']">Name should Required</p>
+        <p *ngIf="CONTROLS?.errors?.['minlength']">Name should be minimum 6 letters</p>
+        <p *ngIf="CONTROLS?.errors?.['maxlength']">Name should maximum 12 letters</p>
+    </div>
+
+
+CONTROLS:
+=========
+1) FormGroup = userForm.get('name')
+2) Nested FormGroup = userForm.get('address')?.get('city)
+3) FormArray = cardsFormArray.controls[i].get('number')

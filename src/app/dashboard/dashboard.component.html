@@ -1,12 +1,14 @@
 <div class="parent">
     <div class="left">
         <h1 routerLink="/dashboard">Dashboard</h1>
+        
         <h3 routerLink="/dashboard">Home</h3>
         <h3 routerLink="data-binding">Data Binding</h3>
         <h3 routerLink="directives">Directives</h3>
         <h3 routerLink="employee">Employee</h3>
         <h3 routerLink="vehicles">Vehicles</h3>
-        <h3 routerLink="/">login</h3>
+        <h3 routerLink="create-user">Create User</h3>
+        <h3 (click)="logout()">Logout</h3>
     </div>
     <div class="right">
         <router-outlet></router-outlet>

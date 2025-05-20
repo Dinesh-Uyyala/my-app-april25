@@ -1,1 +1,8 @@
-<H1>Facebook Login</H1>
+<form class="form" [formGroup]="loginForm">
+    <h1>Login</h1>
+  <!-- <input placeholder="Enter your name" class="input" type="text"> -->
+  <input placeholder="Enter your email" class="input" type="text" formControlName="email">
+    <input placeholder="Enter your password" class="input" type="password" formControlName="password">
+
+  <button (click)="login()">Login</button>
+</form>
