@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./communication.component.css']
 })
 export class CommunicationComponent {
-
+  name:string='';
+    display(data:string){
+    this.name=data;
+  }
 }
