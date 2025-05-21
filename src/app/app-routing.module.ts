@@ -14,6 +14,7 @@ import { AuthenticationGuard } from './authentication.guard';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { CommunicationComponent } from './communication/communication.component';
 import { ParentComponent } from './parent/parent.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
@@ -29,6 +30,7 @@ const routes: Routes = [
     {path:'edit-vehicle/:id',component:CreateVehicleComponent},
     {path:'communication',component:CommunicationComponent},
     {path:'parent',component:ParentComponent},
+    {path:'sibling1',component:Sibling1Component},
   ]}, 
   {path:'**',component:ErrorComponent}
 ];
