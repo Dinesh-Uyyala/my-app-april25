@@ -17,6 +17,10 @@ import { CreateVehicleComponent } from './create-vehicle/create-vehicle.componen
 import { CreateUserComponent } from './create-user/create-user.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { CommunicationComponent } from './communication/communication.component';
+import { ChildComponent } from './child/child.component';
+import { ParentComponent } from './parent/parent.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +37,10 @@ import { CommunicationComponent } from './communication/communication.component'
     CreateUserComponent,
     VehicleDetailsComponent,
     CommunicationComponent,
+    ChildComponent,
+    ParentComponent,
+    Sibling1Component,
+    Sibling2Component,
   ],
   imports: [
     BrowserModule,
