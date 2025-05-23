@@ -1,12 +1,13 @@
 {
-  "name": "my-app-april25",
+  "name": "my-project-april25",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "dev":"ng serve"
   },
   "private": true,
   "dependencies": {

@@ -1,0 +1,62 @@
+[
+    {
+    "Vehicle": "puma",
+    "manufacturer": "Maserati",
+    "model": "Beetle",
+    "type": "Convertible",
+    "fuel": "Gasoline",
+    "color": "plum",
+    "image": "https://loremflickr.com/640/480/food",
+    "cost": "134.00",
+    "tyres": 8,
+    "id": "263"
+  },
+  {
+    "Vehicle": "Cadillac Fortwo",
+    "manufacturer": "Mini",
+    "model": "Fortwo",
+    "type": "Hatchback",
+    "fuel": "Hybrid",
+    "color": "lime",
+    "image": "https://loremflickr.com/640/480/technics",
+    "cost": "291.00",
+    "tyres": 66,
+    "id": "264"
+  },
+  {
+    "Vehicle": "Volvo XC90",
+    "manufacturer": "Cadillac",
+    "model": "Fortwo",
+    "type": "Extended Cab Pickup",
+    "fuel": "Gasoline",
+    "color": "turquoise",
+    "image": "https://loremflickr.com/640/480/cats",
+    "cost": "142.00",
+    "tyres": 60,
+    "id": "265"
+  },
+  {
+    "Vehicle": "Audi Roadster  dd",
+    "manufacturer": "Fiat",
+    "model": "Model Y",
+    "type": "SUV",
+    "fuel": "Electric",
+    "color": "yellow",
+    "image": "https://i.ytimg.com/vi/KMh71CvioPk/maxresdefault.jpg",
+    "cost": "21.00",
+    "tyres": 6,
+    "id": "266"
+  },
+  {
+    "Vehicle": "Dodge XC90",
+    "manufacturer": "Toyota",
+    "model": "A4",
+    "type": "Wagon",
+    "fuel": "Gasoline",
+    "color": "green",
+    "image": "https://loremflickr.com/640/480/technics",
+    "cost": "804.00",
+    "tyres": 84,
+    "id": "267"
+  }
+]
