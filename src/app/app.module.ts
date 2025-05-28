@@ -25,6 +25,7 @@ import { CapitalDirective } from './capital.directive';
 import { InrPipe } from './inr.pipe';
 import { TokenInterceptor } from './token.interceptor';
 import { AboutModule } from './about/about.module';
+import { HooksComponent } from './hooks/hooks.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { AboutModule } from './about/about.module';
     Sibling2Component,
     CapitalDirective,
     InrPipe,
+    HooksComponent,
   ],
   imports: [
     BrowserModule,

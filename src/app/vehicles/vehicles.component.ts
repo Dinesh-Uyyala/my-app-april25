@@ -10,7 +10,7 @@ export class VehiclesComponent {
   vehicles:any=[];
   constructor(private _vehicleService:VehiclesService){
     this.loadVehicles();
-  }
+  } 
 
   loadVehicles(){
     this._vehicleService.getVehicles().subscribe((data:any)=>{

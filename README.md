@@ -126,3 +126,60 @@ CONTROLS:
 1) FormGroup = userForm.get('name')
 2) Nested FormGroup = userForm.get('address')?.get('city)
 3) FormArray = cardsFormArray.controls[i].get('number')
+
+
+
+LifeCycleHooks:
+===============
+
+1) ngOnChanges- when parent to child (@input)
+2) ngOnInIt- initialization
+3) ngDoCheck- change detection 
+4) ngAfterContentInit- whenever new content comes into component
+5) ngAfterContentChecked- 
+6) ngAfterViewInit- whenever view rendered in the component
+7) ngAfterViewChecked- 
+8) ngOnDestroy- when component get destroyed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Build:
+======
+1) AOT --> Ahead of Time
+    Code
+    Transpile
+    Compile
+    bundle
+    Download in the browser
+    run--> open
+
+
+
+2) JIT --> Just in Time
+    Code
+    Transpile
+    bundle
+    Download in the browser
+    Compile
+    run--> open
+
+
+    Bundle Optimization Techniques:
+    ===============================
+    1) Tree Shaking
+    2) Minification
+    3) Uglification
