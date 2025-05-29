@@ -25,6 +25,9 @@ import { CapitalDirective } from './capital.directive';
 import { InrPipe } from './inr.pipe';
 import { TokenInterceptor } from './token.interceptor';
 import { AboutModule } from './about/about.module';
+import { HooksComponent } from './hooks/hooks.component';
+import { ChartsComponent } from './charts/charts.component';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -47,6 +50,8 @@ import { AboutModule } from './about/about.module';
     Sibling2Component,
     CapitalDirective,
     InrPipe,
+    HooksComponent,
+    ChartsComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,7 +59,8 @@ import { AboutModule } from './about/about.module';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule, 
-    AboutModule
+    AboutModule, 
+    StoreModule.forRoot({}, {})
   ],
   providers: [
     {
