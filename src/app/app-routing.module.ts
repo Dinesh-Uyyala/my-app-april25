@@ -15,6 +15,8 @@ import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.compo
 import { CommunicationComponent } from './communication/communication.component';
 import { ParentComponent } from './parent/parent.component';
 import { Sibling1Component } from './sibling1/sibling1.component';
+import { HooksComponent } from './hooks/hooks.component';
+import { ChartsComponent } from './charts/charts.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
@@ -31,10 +33,14 @@ const routes: Routes = [
     {path:'communication',component:CommunicationComponent},
     {path:'parent',component:ParentComponent},
     {path:'sibling1',component:Sibling1Component},
+    {path:'hooks',component:HooksComponent},
   ]}, 
   {
     path: 'payments',
     loadChildren: () => import('./payments/payments.module').then(m => m.PaymentsModule)
+      },
+      {
+        path:'charts',component:ChartsComponent
       },
   {path:'**',component:ErrorComponent}
 ];

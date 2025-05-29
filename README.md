@@ -126,3 +126,113 @@ CONTROLS:
 1) FormGroup = userForm.get('name')
 2) Nested FormGroup = userForm.get('address')?.get('city)
 3) FormArray = cardsFormArray.controls[i].get('number')
+
+
+
+LifeCycleHooks:
+===============
+
+1) ngOnChanges- when parent to child (@input)
+2) ngOnInIt- initialization
+3) ngDoCheck- change detection 
+4) ngAfterContentInit- whenever new content comes into component
+5) ngAfterContentChecked- 
+6) ngAfterViewInit- whenever view rendered in the component
+7) ngAfterViewChecked- 
+8) ngOnDestroy- when component get destroyed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Build:
+======
+1) AOT --> Ahead of Time
+    Code
+    Transpile
+    Compile
+    bundle
+    Download in the browser
+    run--> open
+
+
+
+2) JIT --> Just in Time
+    Code
+    Transpile
+    bundle
+    Download in the browser
+    Compile
+    run--> open
+
+
+    Bundle Optimization Techniques:
+    ===============================
+    1) Tree Shaking
+    2) Minification
+    3) Uglification
+
+
+
+    Git :
+=====
+-> install git software (git -v), create an account in GitHub
+1) System <--> GitHub
+    git config -g user.name "XXXXXX"
+    git config -g user.email "XXXXXX@email.com"
+
+    check:
+    ======
+        git config --list
+
+2) Repository <--> Project
+    git init
+    git remote add origin repository-url 
+
+    check:
+    ======
+    git remote -v
+
+3) Send code to repository
+    git add .
+    git commit -m "commit message"
+    git push
+    
+
+4) Branching
+    git branch
+    create a branch in github
+    git fetch
+    git checkout branchName
+
+5) Pull Request
+    After pushing code-> Raise pull request-> look for conflicts-> create pull request-> merge pull request
+
+6) Shift Branches
+    commit changes
+    git stash --include-untracked
+    after coming back use (git stash pop)
+
+7) Delete a commit
+    git log---> 111111 222222
+    git reset 222222
+
+8) Merge commit into another Branch
+    git cherry-pick XXXXXX
+
+9) Two banches code into one branch
+    checkout to branch feature/three
+    git pull origin feature/one
+    git pull origin feature/two
