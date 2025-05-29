@@ -236,3 +236,9 @@ Build:
     checkout to branch feature/three
     git pull origin feature/one
     git pull origin feature/two
+
+10) merge conflicts
+    checkout to the branch
+    git pull origin master
+    accept incoming / accept current / accept both
+    git add, commit, push
