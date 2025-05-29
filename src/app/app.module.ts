@@ -26,6 +26,8 @@ import { InrPipe } from './inr.pipe';
 import { TokenInterceptor } from './token.interceptor';
 import { AboutModule } from './about/about.module';
 import { HooksComponent } from './hooks/hooks.component';
+import { ChartsComponent } from './charts/charts.component';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -49,6 +51,7 @@ import { HooksComponent } from './hooks/hooks.component';
     CapitalDirective,
     InrPipe,
     HooksComponent,
+    ChartsComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,7 +59,8 @@ import { HooksComponent } from './hooks/hooks.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule, 
-    AboutModule
+    AboutModule, 
+    StoreModule.forRoot({}, {})
   ],
   providers: [
     {
