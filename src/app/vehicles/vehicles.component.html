@@ -3,6 +3,8 @@
 
 <input type="text" placeholder="enter text to search" [(ngModel)]="keywords" (keyup)="search()">
 
+<input type="text" placeholder="Enter text to search" [formControl]="searchControl">
+
 <select [(ngModel)]="column">
     <option value="Vehicle">Vehicle Name</option>
     <option value="color">Color</option>

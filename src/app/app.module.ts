@@ -28,6 +28,9 @@ import { AboutModule } from './about/about.module';
 import { HooksComponent } from './hooks/hooks.component';
 import { ChartsComponent } from './charts/charts.component';
 import { StoreModule } from '@ngrx/store';
+import { UsersComponent } from './admin/users/users.component';
+import { StaffComponent } from './admin/staff/staff.component';
+// import { DashboardComponent } from "./admin/dashboard/dashboard.component";
 
 @NgModule({
   declarations: [
@@ -52,16 +55,19 @@ import { StoreModule } from '@ngrx/store';
     InrPipe,
     HooksComponent,
     ChartsComponent,
+    StaffComponent
+    // UsersComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule, 
-    AboutModule, 
-    StoreModule.forRoot({}, {})
-  ],
+    ReactiveFormsModule,
+    AboutModule,
+    StoreModule.forRoot({}, {}),
+    UsersComponent
+],
   providers: [
     {
       provide:HTTP_INTERCEPTORS,

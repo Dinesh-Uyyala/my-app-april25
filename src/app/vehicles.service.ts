@@ -41,4 +41,5 @@ export class VehiclesService {
   updateVehicle(id:any,data:any):Observable<any>{
     return this._httpClient.put(this.baseUrl+"/"+id,data)
   }
+  
 }
