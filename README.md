@@ -186,7 +186,7 @@ Build:
 
 
 
-    Git :
+Git :
 =====
 -> install git software (git -v), create an account in GitHub
 1) System <--> GitHub
@@ -242,3 +242,24 @@ Build:
     git pull origin master
     accept incoming / accept current / accept both
     git add, commit, push
+
+
+
+RXJS Operators
+==============
+
+from/of=> creational operators
+map=> to alter every element/data
+filter=> to select some data
+
+ForkJoin=> Parallel Operations
+
+forkJoin([observable1, observable2]).subscribe(result =>
+console.log(result[0], result[1]);
+)
+
+concatMap=> Sequential API Calls
+
+switchMap=> calls the new API call
+exhaustMap=> calls old API call and rejects new API call
+debounceTime=> delay the API call

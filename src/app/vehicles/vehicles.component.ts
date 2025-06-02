@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { VehiclesService } from '../vehicles.service';
+import { FormControl, FormGroup } from '@angular/forms';
+import { debounceTime, switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-vehicles',
@@ -11,6 +13,25 @@ export class VehiclesComponent {
   constructor(private _vehicleService:VehiclesService){
     this.loadVehicles();
   } 
+
+  searchControl = new FormControl();
+
+  ngOnInit() {
+    this.searchControl.valueChanges
+      .pipe(
+        debounceTime(1000), // Wait for 1 second after the last keystroke
+        switchMap(search => this._vehicleService.filteredVehicles(search))
+      )
+      .subscribe(
+        (data: any) => {
+          console.log(data);
+          // this.vehicles = data;
+        },
+        (err: any) => {
+          alert("Internal Server Error");
+        }
+      );
+  }
 
   loadVehicles(){
     this._vehicleService.getVehicles().subscribe((data:any)=>{
