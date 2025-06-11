@@ -10,6 +10,7 @@ import { debounceTime, switchMap } from 'rxjs';
 })
 export class VehiclesComponent {
   vehicles:any=[];
+  dataLoading:Boolean=true;
   constructor(private _vehicleService:VehiclesService){
     this.loadVehicles();
   } 
@@ -37,9 +38,11 @@ export class VehiclesComponent {
     this._vehicleService.getVehicles().subscribe((data:any)=>{
       console.log(data);
       this.vehicles=data;
+      this.dataLoading=false;
       console.log(this.vehicles);
     },(err:any)=>{
-      alert("Internal Sever Error!")
+      alert("Internal Sever Error!");
+      this.dataLoading=false;
     }
 
     )

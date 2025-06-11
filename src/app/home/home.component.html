@@ -1,1 +1,26 @@
-<p>home works!</p>
+<!-- <button mat-raised-button (click)="openDialog('0ms', '0ms')">Open dialog without animation</button> -->
+<div class="page">
+
+<mat-card class="example-card">
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Chicken Biryani</mat-card-title>
+        <mat-card-subtitle>Non-Veg</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image
+        src="https://images.pexels.com/photos/16020573/pexels-photo-16020573/free-photo-of-rice-and-chicken-meal-on-the-plate.jpeg?auto=compress&cs=tinysrgb&w=600"
+        alt="Photo of a Shiba Inu">
+    <mat-card-content>
+        <p>
+            Chicken Biryani is a very famous dish in India. It is very tasty and mixed of all flavours. Hyderabad
+            biryani is the best of all.
+        </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button (click)="addToCart()">Add to Cart</button>
+        <button mat-button (click)="removeFromCart()">Remove</button>
+    </mat-card-actions>
+</mat-card>
+<app-cart [count]="cartCount"></app-cart>
+
+</div>

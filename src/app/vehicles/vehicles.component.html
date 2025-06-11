@@ -1,6 +1,9 @@
 <h1>Vehicles Details</h1>
+<div *ngIf="dataLoading">
+    <app-loading></app-loading>
+</div>
 
-
+<div *ngIf="!dataLoading">
 <input type="text" placeholder="enter text to search" [(ngModel)]="keywords" (keyup)="search()">
 
 <input type="text" placeholder="Enter text to search" [formControl]="searchControl">
@@ -72,3 +75,4 @@
         </tr>
     </tbody>
 </table>
+</div>
