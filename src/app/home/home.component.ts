@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { User } from '../user';
+import { VehiclesComponent } from '../vehicles/vehicles.component';
+import {MatDialog, MatDialogRef} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,20 @@ import { User } from '../user';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+    constructor(public dialog: MatDialog) {}
 
-  user:User={name:'Waseem',age:22,mobile:630454654}
+  openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
+    this.dialog.open(VehiclesComponent, {
+      width: '950px',
+      enterAnimationDuration,
+      exitAnimationDuration,
+    });
+  }
+  cartCount:number=0
+  addToCart(){
+    this.cartCount=this.cartCount+1;
+  }
+  removeFromCart(){
+    this.cartCount=this.cartCount-1;
+  }
 }

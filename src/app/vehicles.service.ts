@@ -1,13 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class VehiclesService {
   // baseUrl:string='/assets/data.json'
-  baseUrl:string="https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction";
+  baseUrl:string=Environment.vehicleUrl;
 
   constructor(private _httpClient:HttpClient) { }
 

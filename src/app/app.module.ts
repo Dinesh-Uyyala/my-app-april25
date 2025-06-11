@@ -31,7 +31,23 @@ import { StoreModule } from '@ngrx/store';
 import { UsersComponent } from './admin/users/users.component';
 import { StaffComponent } from './admin/staff/staff.component';
 // import { DashboardComponent } from "./admin/dashboard/dashboard.component";
-
+import {MatDialogModule} from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from "@angular/material/button";
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { ContentComponent } from './content/content.component';
+import { ContactComponent } from './contact/contact.component';
+import { MatCardModule } from "@angular/material/card";
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatDividerModule} from '@angular/material/divider';
+import { MatIconModule } from "@angular/material/icon";
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+import { MatInputModule } from "@angular/material/input";
+import { LoadingComponent } from './loading/loading.component';
+import { CartComponent } from './cart/cart.component';
+import { MatBadgeModule } from "@angular/material/badge";
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,7 +71,13 @@ import { StaffComponent } from './admin/staff/staff.component';
     InrPipe,
     HooksComponent,
     ChartsComponent,
-    StaffComponent
+    StaffComponent,
+    HeaderComponent,
+    FooterComponent,
+    ContentComponent,
+    ContactComponent,
+    LoadingComponent,
+    CartComponent
     // UsersComponent
   ],
   imports: [
@@ -66,7 +88,18 @@ import { StaffComponent } from './admin/staff/staff.component';
     ReactiveFormsModule,
     AboutModule,
     StoreModule.forRoot({}, {}),
-    UsersComponent
+    UsersComponent,
+    MatDialogModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatCardModule,
+    MatDividerModule,
+    MatProgressBarModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatInputModule,
+    MatBadgeModule
 ],
   providers: [
     {

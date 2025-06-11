@@ -17,6 +17,7 @@ import { ParentComponent } from './parent/parent.component';
 import { Sibling1Component } from './sibling1/sibling1.component';
 import { HooksComponent } from './hooks/hooks.component';
 import { ChartsComponent } from './charts/charts.component';
+import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
@@ -34,6 +35,7 @@ const routes: Routes = [
     {path:'parent',component:ParentComponent},
     {path:'sibling1',component:Sibling1Component},
     {path:'hooks',component:HooksComponent},
+    {path:'contact',component:ContactComponent}
   ]}, 
   {
     path: 'payments',

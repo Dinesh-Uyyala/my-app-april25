@@ -44,7 +44,6 @@ get CardsFormArray(){
 
 
 addCard(){
-
   this.CardsFormArray.push(
     new FormGroup({
       number:new FormControl(),
